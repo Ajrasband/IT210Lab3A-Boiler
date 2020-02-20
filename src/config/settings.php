@@ -6,7 +6,7 @@ $servername = 'mariadb';
 
 // THESE NEED TO MATCH THE VALUES IN docker-compose.yml
 $mysql_user = 'admin';
-$mysql_password = 'changeme';
-$mysql_database = 'todo';
+$mysql_password = 'Rewind';
+$mysql_database = 'todo-app';
 
 ?>

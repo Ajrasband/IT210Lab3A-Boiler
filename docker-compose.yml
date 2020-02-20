@@ -25,8 +25,8 @@ services:
 
       # THESE NEED TO MATCH THE VALUES IN settings.php
       MYSQL_USER: admin
-      MYSQL_PASSWORD: changeme
-      MYSQL_DATABASE: todo
+      MYSQL_PASSWORD: Rewind
+      MYSQL_DATABASE: todo-app
 
   phpmyadmin:
     image: phpmyadmin/phpmyadmin

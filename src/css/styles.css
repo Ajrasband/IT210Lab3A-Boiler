@@ -1,0 +1,48 @@
+:root {
+    --primary: #212121;
+
+    --primary-light:  #616161;
+
+    --primary-dark:  #000000;
+
+    --primary-text:  #ffffff;
+
+    --primary-text-color:  #eceff1;
+
+    /* variations of your secondary color */
+
+    --secondary:  #ff7043;
+
+    --secondary-light:  #ffab91;
+
+    --secondary-dark:  #e64a19;
+
+    --secondary-text:  #000000;
+
+    --secondary-text-color:  #263238;
+}
+
+nav {
+    background-color: var(--primary);
+}
+
+.btn, .btn-small {
+    background-color: var(--secondary);
+}
+
+.btn-small {
+    float: right;
+}
+
+span {
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+li {
+    margin: 10px;
+}
+
+#task_done {
+    color: var(--primary-light);
+}
