@@ -30,6 +30,7 @@ nav {
     background-color: var(--secondary);
 }
 
+/* Need to change anchor tag padding so that the top button doesn't float weird. */
 .btn-small {
     float: right;
 }

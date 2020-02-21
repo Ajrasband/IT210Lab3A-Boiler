@@ -35,8 +35,8 @@ if ($conn->connect_error) {
 			<div class="container">
 				<a href="#" class="brand-logo">To-Do List</a>
             	<ul id="nav-mobile" class="right hide-on-med-and-dow">
-					<li><a href="">Login</a></li>
-        			<li><a href="">Register</a></li>
+					<li><a href="login.php">Login</a></li>
+        			<li><a href="register.php">Register</a></li>
             	</ul>
 			</div>
         </div>
