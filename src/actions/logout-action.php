@@ -1,5 +1,5 @@
 <?php
-error_reporting(-1);
+error_reporting(0);
 session_start();
 include '../config/settings.php'; //DB Connect Function Defined Here
 
