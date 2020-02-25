@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <!DOCTYPE html>
@@ -30,16 +33,16 @@
 
     <div class="container">
         <div class="row">
-            <form class="col s12" action="actions/login-action.php" method="$_POST">
+            <form class="col s12" action="actions/login-action.php" method="post">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="text" class="validate">
+                        <input type="text" class="validate" name="username">
                         <label for="password">Username</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate">
+                        <input type="password" class="validate" name="password">
                         <label for="password">Password</label>
                     </div>
                 </div>

@@ -1,17 +1,6 @@
 <?php
 
-include 'config/settings.php';
-
 session_start();
-$_SESSION['test'] = 'Hello World';
-
-// Create connection
-$conn = new mysqli($servername, $mysql_user, $mysql_password, $mysql_database);
-
-// Check connection
-if ($conn->connect_error) {
-	die('Connection failed: ' . $conn->connect_error);
-}
 
 ?>
 <!DOCTYPE html>
@@ -32,13 +21,13 @@ if ($conn->connect_error) {
 <body>
     <nav>
         <div class="nav-wrapper">
-			<div class="container">
-				<a href="#" class="brand-logo">To-Do List</a>
-            	<ul id="nav-mobile" class="right hide-on-med-and-dow">
-					<li><a href="login.php">Login</a></li>
-        			<li><a href="register.php">Register</a></li>
-            	</ul>
-			</div>
+            <div class="container">
+                <a href="#" class="brand-logo">To-Do List</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-dow">
+                    <li><a href="login.php">Login</a></li>
+                    <li><a href="register.php">Register</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -74,6 +63,22 @@ if ($conn->connect_error) {
         <button class="btn waves-effect waves-light" type="submit" name="action" id="unsort_button">Unsort List
             <i class="material-icons right">list</i>
         </button>
+    </div>
+
+    <div class="container">
+        <?php
+        if (isset($_SESSION["newuser"])) {
+            echo '
+        <div class="row">
+            <div class="col s12 m5">
+                <div class="card-panel" style="background-color: #e64a19">
+                    <span class="white-text">' . $_SESSION["newuser"] . '</span>
+                </div>
+            </div>
+        </div>';
+            unset($_SESSION["newuser"]);
+        }
+        ?>
     </div>
 
     <!--JavaScript at end of body for optimized loading-->
