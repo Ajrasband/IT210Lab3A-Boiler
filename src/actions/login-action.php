@@ -18,7 +18,6 @@ $stmt->bind_param('s', $username);
 $stmt->bind_result($user);
 $stmt->execute();
 $stmt->fetch();
-echo "$user";
 $stmt->close();
 
 //Check for the same password. Will return the value into $pass
@@ -27,7 +26,16 @@ $stmt->bind_param('s', $password);
 $stmt->bind_result($pass);
 $stmt->execute();
 $stmt->fetch();
-echo "$pass";
 $stmt->close();
 
 $conn->close();
+
+if ($username === $user && $password === $pass) {
+    $_SESSION["login_user"] = "Welcome back $username";
+    header("Location:../index.php", TRUE, 302);
+    exit;
+} else {
+    $_SESSION["login_error"] = "Invalid Credentials";
+    header("Location:../login.php", TRUE, 302);
+    exit;
+}

@@ -78,6 +78,17 @@ session_start();
         </div>';
             unset($_SESSION["newuser"]);
         }
+        if (isset($_SESSION["login_user"])) {
+            echo '
+        <div class="row">
+            <div class="col s12 m5">
+                <div class="card-panel" style="background-color: #e64a19">
+                    <span class="white-text">' . $_SESSION["login_user"] . '</span>
+                </div>
+            </div>
+        </div>';
+            unset($_SESSION["login_user"]);
+        }
         ?>
     </div>
 

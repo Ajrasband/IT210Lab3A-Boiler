@@ -53,6 +53,22 @@ session_start();
         </div>
     </div>
 
+    <div class="container">
+    <?php
+        if (isset($_SESSION["login_error"])) {
+            echo'
+            <div class="row">
+                <div class="col s12 m5">
+                    <div class="card-panel" style="background-color: #e64a19">
+                        <span class="white-text">' . $_SESSION["login_error"] . '</span>
+                    </div>
+                </div>
+            </div>';
+            unset($_SESSION["login_error"]);
+        }
+        ?>
+    </div>
+
     <!--JavaScript at end of body for optimized loading-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script src="js/scripts.js"></script>
