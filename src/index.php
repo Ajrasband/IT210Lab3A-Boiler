@@ -1,7 +1,13 @@
 <?php
-
 session_start();
-
+if ($_SESSION['logged_in'] === 'No') {
+    $log = false;
+} else if ($_SESSION['logged_in'] === 'Yes') {
+    $log = true;
+} else {
+    $_SESSION['logged_in'] = 'No';
+    $log = false;
+}
 ?>
 <!DOCTYPE html>
 <html>
@@ -24,7 +30,15 @@ session_start();
             <div class="container">
                 <a href="#" class="brand-logo">To-Do List</a>
                 <ul id="nav-mobile" class="right hide-on-med-and-dow">
-                    <li><a href="login.php">Login</a></li>
+                    <li>
+                        <?php 
+                            if ($log === false) {
+                                echo '<a href="login.php">Login</a>';
+                            } else if ($log === true) {
+                                echo '<a href="actions/logout-action.php">Logout</a>';
+                            }
+                        ?>
+                    </li>
                     <li><a href="register.php">Register</a></li>
                 </ul>
             </div>
