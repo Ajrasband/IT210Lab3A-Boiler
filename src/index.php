@@ -1,7 +1,7 @@
 <?php
 session_start();
 if ($_SESSION['logged_in'] === 'No') {
-    $log = false;
+    header("Location:login.php", TRUE, 302);
 } else if ($_SESSION['logged_in'] === 'Yes') {
     $log = true;
 } else {

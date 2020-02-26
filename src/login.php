@@ -36,13 +36,13 @@ session_start();
             <form class="col s12" action="actions/login-action.php" method="post">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="text" class="validate" name="username">
+                        <input type="text" class="validate" name="username" required>
                         <label for="password">Username</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input type="password" class="validate" name="password">
+                        <input type="password" class="validate" name="password" required>
                         <label for="password">Password</label>
                     </div>
                 </div>

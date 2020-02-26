@@ -36,19 +36,19 @@ session_start();
             <form class="col s12" action="actions/register-action.php" method="post">
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="text" class="validate" name="username">
+                        <input id="password" type="text" class="validate" name="username" required>
                         <label for="password">Username</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" name="password">
+                        <input id="password" type="password" class="validate" name="password" required>
                         <label for="password">Password</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s12">
-                        <input id="password" type="password" class="validate" name="confirm">
+                        <input id="password" type="password" class="validate" name="confirm" required>
                         <label for="password">Confirm Password</label>
                     </div>
                 </div>
