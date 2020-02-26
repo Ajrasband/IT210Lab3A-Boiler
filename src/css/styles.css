@@ -35,11 +35,6 @@ nav {
     background-color: var(--secondary-dark);
 }
 
-
-.btn-small {
-    float: right;
-}
-
 span {
     padding-left: 25px;
     padding-right: 25px;
@@ -51,4 +46,9 @@ li {
 
 #task_done {
     color: var(--primary-light);
+}
+
+button {
+    border: 0;
+    background: white;
 }
